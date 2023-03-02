@@ -3,6 +3,8 @@
 
 @model BooksViewModel
 
+@*cshtml for the index page*@
+
 <h1>The Bookstore</h1>
 
 @foreach (Book b in Model.Books)
@@ -23,55 +25,12 @@
     <div class="card-text p-1">@b.PageCount Pages</div>
 </div>
     }
+
+@*buttons for navigating through the pages*@
+
 <div page-blah="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
      page-class="btn" page-class-normal="btn-outline-dark"
      page-class-selected="btn-primary" class="btn-group pull-right m-1"> &nbsp;
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@*@foreach (Book b in Model.Books)
-{
-    <h3>@b.Title &emsp; $@b.Price</h3>
-
-    <ul>
-        <li>By: @b.Author</li>
-        <li>Publisher: @b.Publisher</li>
-        <li>ISBN: @b.Isbn</li>
-        <li>Publisher: @b.Publisher</li>
-        <li>Classification: @b.Classification</li>
-        <li>Category: @b.Category</li>
-        <li>Page Count: @b.PageCount</li>
-        <li>Publisher: @b.Publisher</li>
-
-    </ul>
-
-    <br />
-
-}
-
-<div page-blah="@Model.PageInfo" page-action="Index"></div>*@

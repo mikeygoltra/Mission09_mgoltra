@@ -36,6 +36,7 @@ namespace Mission09_mgoltra.Infrastructure
 
             TagBuilder final = new TagBuilder("div");
 
+            //dynamically generate page navigation buttons
             for (int i = 1; i <= PageBlah.TotalPages; i++)
             {
                 TagBuilder tb = new TagBuilder("a");
