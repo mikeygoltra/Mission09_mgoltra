@@ -1,5 +1,5 @@
 ﻿
-@*this page creates the shared layout for each page int he website*@
+
 
 <!DOCTYPE html>
 <html>
@@ -7,11 +7,23 @@
     <meta name="viewport" content="width=device-width" />
     <title>Bookstore</title>
     <link href="/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/lib/font-awesome/css/all.css" rel="stylesheet" />
 </head>
 <body>
+    @*nav bar including the shopping cart icon*@
     <div class="bg-dark text-white p-2">
-        <span class="navbar-brand ml-2">Bookstore</span>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">Bookstore</div>
+                <div class="col-1 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
+        </div>
     </div>
+    @*<div class="bg-dark text-white p-2">
+            <span class="navbar-brand ml-2">Bookstore</span>
+        </div>*@
     <div class="row m-1 p-1">
         <div id="categories" class="col-3">
             <vc:categories></vc:categories>
